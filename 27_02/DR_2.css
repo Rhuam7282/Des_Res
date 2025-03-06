@@ -1,45 +1,91 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-img{
+button{
+    display: none;
+    position: fixed;
+}
+img {
     height: 200px;
     border-radius: 100%;
     border: solid 5px rgb(147, 168, 133);
 }
-body{
+
+body {
     background-color: rgb(184, 206, 169);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
-header{
+
+header {
     padding: 20px 0px 40px 0px;
     text-align: center;
 }
-nav ul{
+
+nav ul,
+article {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-main{
+
+main {
     padding: 50px;
+    padding-bottom: 0px;
 }
-article{
+
+article,
+nav {
     margin-bottom: 20px;
     border-bottom: solid 2px rgb(161, 182, 148);
-    padding:  10px 400px;
 }
-article img{
-    width: 100%;
-    height: auto;
+
+article div {
+    width: auto;
+    height: 70%;
 }
-@media (max-width: 768px){
+article div img{
+    width: 70%;
+}
+
+div,
+ul,
+h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
     main{
+        justify-content: center;
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
     }
+    article div{
+        width: 70%;
+        height: auto;
+    }
     article{
-        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    menu{
+        display: none;
+    }
+    button h2 {
         margin: 0px;
-        padding: 10px 50px;
+    }
+    button{
+        background-color: rgb(161, 182, 148);
+        padding: 5px;
+        display: block;
+        position: fixed;
     }
 }
